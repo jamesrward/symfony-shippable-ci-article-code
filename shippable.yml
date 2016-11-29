@@ -11,17 +11,17 @@ archive: true
 env:
     global:
         - SYMFONY__ENV__DATABASE_HOST=127.0.0.1
-        - SYMFONY__ENV__DATABASE_PORT=null
+        - SYMFONY__ENV__DATABASE_PORT=
         - SYMFONY__ENV__DATABASE_NAME=symfony
         - SYMFONY__ENV__DATABASE_USER=shippable
-        - SYMFONY__ENV__DATABASE_PASSWORD=null
+        - SYMFONY__ENV__DATABASE_PASSWORD=
         # Secret parameter value
         - secure: n6whDxVUC//x6w1ABMuwsuVPRNxrirVbNMrHakUphihOmff0DhSjRREsUFelBJoUvZ1DmweuZv44pBKg1Cl5rw+/1HzpA5nWtxzOXHBuipXnaD+eEX4F8LNKPChx4PNbQDO3scwPLVhSBFsEz2zXUic0zGIjg9z8L6uhxMRrk3F4Vsbk8+wmL8Zm1AMYoTCjhjXPWn6m4t1lbgMDpA6r0SSt/gPW0tVzGzEiZrc0sU8/FeVnrhTITHBi4Z+ZA+iLXG0VPrND0l+501dj7fwRQgQ7QwvwosBsqaeGJI/9HFtyLwhzmXg4XO4rjCv010iqqNGnzyRtd9szqenPct2GTQ==
 
 before_install:
     - echo "xdebug.max_nesting_level = 1000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - echo 'variables_order = "EGPCS"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - echo "date.timezone = America/Toronto" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - echo "date.timezone = America/Toronto" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 before_script:
     - composer self-update -n
