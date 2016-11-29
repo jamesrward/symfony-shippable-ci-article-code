@@ -1,7 +1,6 @@
 language: php
 
 php:
-    - 5.5
     - 5.6
 
 services:
@@ -15,7 +14,7 @@ env:
         - SYMFONY__ENV__DATABASE_PORT=~
         - SYMFONY__ENV__DATABASE_NAME=symfony
         - SYMFONY__ENV__DATABASE_USER=shippable
-        - SYMFONY__ENV__DATABASE_PASSWORD=
+        - SYMFONY__ENV__DATABASE_PASSWORD=shippable
         # Secret parameter value
         - secure: n6whDxVUC//x6w1ABMuwsuVPRNxrirVbNMrHakUphihOmff0DhSjRREsUFelBJoUvZ1DmweuZv44pBKg1Cl5rw+/1HzpA5nWtxzOXHBuipXnaD+eEX4F8LNKPChx4PNbQDO3scwPLVhSBFsEz2zXUic0zGIjg9z8L6uhxMRrk3F4Vsbk8+wmL8Zm1AMYoTCjhjXPWn6m4t1lbgMDpA6r0SSt/gPW0tVzGzEiZrc0sU8/FeVnrhTITHBi4Z+ZA+iLXG0VPrND0l+501dj7fwRQgQ7QwvwosBsqaeGJI/9HFtyLwhzmXg4XO4rjCv010iqqNGnzyRtd9szqenPct2GTQ==
         
