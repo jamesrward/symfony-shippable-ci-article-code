@@ -24,7 +24,7 @@ before_install:
 
 before_script:
     - composer self-update -n
-    - composer install --prefer-dist -n
+    - composer install -v
     - mysql -e "CREATE DATABASE $SYMFONY__ENV__DATABASE_NAME"
     - ./app/console doctrine:schema:create -n
 
